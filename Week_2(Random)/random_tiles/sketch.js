@@ -13,10 +13,15 @@ function draw() {
   for (var x = 0; x < 10; x++) {
     tiles[x] = []; // create nested array, or pain in the butt
     for (var y = 0; y <10; y++) {
-      tiles[x][y] = round(random(1));
+      tiles[x][y] = round(random(0,2)+1);
       if(tiles[x][y]==0){
       	fill(0);
-      }else{fill(255,204,0);}
+      }
+      if(tiles[x][y]==1){
+        fill(39, 112,110);
+      }
+
+      else{fill(255,137,0);}
 
       rect(x*35, y*35, 15, 35); //top left corner
       rect(width-35-x*35, y*35, 15, 35); //top rigth
